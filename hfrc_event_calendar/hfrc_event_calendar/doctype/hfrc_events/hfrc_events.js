@@ -22,6 +22,6 @@ frappe.ui.form.on('HFRC Events', {
 		// console.log(++count);
 		// console.log($('[data-fieldname="image"] > .form-clickable-section > .flex > .grid-buttons > .grid-add-row').text());
 		// $('[data-fieldname="image"] > .form-clickable-section > .flex > .grid-buttons > .grid-add-row').hide();
-		// testing
+		// testing done
 	}
 });
