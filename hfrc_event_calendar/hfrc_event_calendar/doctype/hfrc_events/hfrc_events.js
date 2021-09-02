@@ -23,8 +23,6 @@ frappe.ui.form.on('HFRC Events', {
 			console.log(".attached-file-link");
 			frm.refresh_field("preview1");			
 		});
-		
-
 	},
 	add_photo: function(frm){
 		if(count<5){
