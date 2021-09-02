@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_guest_to_view": 1,
  "autoname": "event_title.###",
  "creation": "2021-08-11 12:48:34.790372",
  "doctype": "DocType",
@@ -16,7 +15,7 @@
   "event_title",
   "description",
   "info",
-  "speaker_guest",
+  "speaker__guest",
   "column_break_10",
   "location",
   "other_location",
@@ -29,10 +28,27 @@
   "column_break_20",
   "event_type",
   "images",
-  "image",
+  "add_photo",
+  "remove_photo",
+  "column_break_23",
+  "image1",
+  "preview1",
+  "column_break_24",
+  "image2",
+  "preview2",
+  "column_break_27",
+  "image3",
+  "preview3",
+  "column_break_30",
+  "image4",
+  "preview4",
+  "column_break_33",
+  "image5",
+  "preview5",
   "section_break_20",
   "remarks",
   "section_break_22",
+  "color_37",
   "route",
   "amended_from"
  ],
@@ -57,6 +73,7 @@
    "fieldname": "event_title",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Event Title",
    "reqd": 1,
    "unique": 1
@@ -114,7 +131,6 @@
   {
    "fieldname": "category",
    "fieldtype": "Link",
-   "in_standard_filter": 1,
    "label": "Category",
    "options": "Category",
    "reqd": 1
@@ -184,29 +200,110 @@
    "label": "Route"
   },
   {
-   "collapsible": 1,
    "fieldname": "images",
    "fieldtype": "Section Break",
    "label": "Images"
   },
   {
-   "fieldname": "image",
-   "fieldtype": "Table",
-   "label": "Image",
-   "options": "Image"
-  },
-  {
-   "fieldname": "speaker_guest",
+   "fieldname": "speaker__guest",
    "fieldtype": "Data",
    "label": "Speaker / Guest",
    "reqd": 1
+  },
+  {
+   "fieldname": "image1",
+   "fieldtype": "Attach Image"
+  },
+  {
+   "fieldname": "preview1",
+   "fieldtype": "Image",
+   "options": "image1"
+  },
+  {
+   "fieldname": "image2",
+   "fieldtype": "Attach Image",
+   "hidden": 1
+  },
+  {
+   "fieldname": "preview2",
+   "fieldtype": "Image",
+   "hidden": 1,
+   "options": "image2"
+  },
+  {
+   "fieldname": "image3",
+   "fieldtype": "Attach Image",
+   "hidden": 1
+  },
+  {
+   "fieldname": "preview3",
+   "fieldtype": "Image",
+   "hidden": 1,
+   "options": "image3"
+  },
+  {
+   "fieldname": "image4",
+   "fieldtype": "Attach Image",
+   "hidden": 1
+  },
+  {
+   "fieldname": "preview4",
+   "fieldtype": "Image",
+   "hidden": 1,
+   "options": "image4"
+  },
+  {
+   "fieldname": "image5",
+   "fieldtype": "Attach Image",
+   "hidden": 1
+  },
+  {
+   "fieldname": "preview5",
+   "fieldtype": "Image",
+   "hidden": 1,
+   "options": "image5"
+  },
+  {
+   "fieldname": "remove_photo",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "- Remove Photo"
+  },
+  {
+   "fieldname": "add_photo",
+   "fieldtype": "Button",
+   "label": "+ Add Photo"
+  },
+  {
+   "fieldname": "color_37",
+   "fieldtype": "Color",
+   "hidden": 1
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_33",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
   }
  ],
- "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-08-26 10:28:50.804457",
+ "modified": "2021-09-01 13:28:24.681015",
  "modified_by": "Administrator",
  "module": "Hfrc Event Calendar",
  "name": "HFRC Events",
@@ -232,22 +329,11 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Editor",
+   "role": "Website Manager",
    "share": 1,
-   "submit": 1,
    "write": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Guest",
-   "share": 1
   }
  ],
- "route": "hfrc-event-calendar",
  "sort_field": "modified",
  "sort_order": "DESC",
  "title_field": "event_title",
